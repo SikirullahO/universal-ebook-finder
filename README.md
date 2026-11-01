@@ -4,6 +4,8 @@ A responsive single-page app for finding free, public-domain e-books. Search Pro
 
 It is written in plain HTML, CSS and JavaScript, with no frameworks, dependencies or build step.
 
+![Results grid showing book covers, download counts and format buttons](screenshots/results.png)
+
 ## Features
 
 - **Search and language filter** across the Project Gutenberg catalogue, most downloaded first
@@ -13,6 +15,24 @@ It is written in plain HTML, CSS and JavaScript, with no frameworks, dependencie
 - **Loading skeletons and progress messages**, which matter because the catalogue API can be slow
 - **Specific error messages** for each service, with retry where it helps
 - **Responsive dark, glass-style layout**, with keyboard support and reduced-motion handling
+
+## Screenshots
+
+### Author biography
+
+"About the author" opens a Wikipedia summary over the card, so the grid stays in place.
+
+![Author biography panel open on the Pride and Prejudice card](screenshots/author-bio.png)
+
+### Loading state
+
+Skeleton cards hold the layout while the catalogue responds.
+
+![Skeleton cards shown while a search is running](screenshots/loading.png)
+
+### Mobile
+
+<img src="screenshots/mobile.png" alt="Single-column mobile layout with the search bar above a book card" width="300">
 
 ## Getting started
 
@@ -38,9 +58,10 @@ None of these services needs an API key. A failure in Open Library or Wikipedia 
 ## Project structure
 
 ```
-index.html   Page structure and card templates
-styles.css   Theme, layout, skeletons and responsive rules
-app.js       API calls, error handling and rendering
+index.html    Page structure and card templates
+styles.css    Theme, layout, skeletons and responsive rules
+app.js        API calls, error handling and rendering
+screenshots/  Images used in this README
 ```
 
 ## Known limitations
@@ -55,4 +76,4 @@ Books and metadata come from [Project Gutenberg](https://www.gutenberg.org/) thr
 
 ## License
 
-Released under the [MIT License](LICENSE). This covers the code in this repository, not the books, covers or biographies served by the APIs above.
+Released under the [MIT License](LICENSE). This covers the code in this repository, not the books, covers or biographies served by the APIs above, including the cover art visible in the screenshots.
